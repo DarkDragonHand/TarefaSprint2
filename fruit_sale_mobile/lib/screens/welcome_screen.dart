@@ -8,15 +8,29 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               width: double.infinity,
               color: const Color(0xFFFFA451),
-              child: Image.asset('assets/images/WelcomeScreen/Component1.png'),
+              child: Image.asset('assets/images/Component1.png'),
             ),
-            TextButton(
+            Container(),
+            const Text("Get The Freshest Fruit Salad Combo"),
+            const Text(
+                "We deliver the best and freshest fruit salad in town. Order for a combo today!!!"),
+            ElevatedButton(
               onPressed: () {},
-              child: const Text("Let's continue"),
+              style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Color(0xFFFFA451))),
+              child: const Text(
+                "Let's continue",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic,
+                ),
+                textAlign: TextAlign.center,
+              ),
             )
           ],
         ),
