@@ -16,7 +16,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Image.asset('assets/images/Component1.png'),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 40, left: 20),
+              padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
@@ -38,10 +38,8 @@ class WelcomeScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(56),
-                  maximumSize: const Size.fromWidth(327),
-                  //backgroundColor: 
-                  //backgroundColor: MaterialStatePropertyAll(Color(0xFFFFA451)),
+                  minimumSize: const Size(327.0, 56.0),
+                  backgroundColor: const Color(0xFFFFA451),
                   ),
               child: const Text(
                 "Let's continue",
