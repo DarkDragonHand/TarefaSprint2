@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_sale_mobile/screens/authentication_screen.dart';
 import 'package:fruit_sale_mobile/screens/home_screen.dart';
 import 'package:fruit_sale_mobile/screens/splash_screen.dart';
 import 'package:fruit_sale_mobile/screens/welcome_screen.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

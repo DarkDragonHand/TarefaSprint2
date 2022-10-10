@@ -176,12 +176,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(height: 26),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 24),
-            child: Text(
-              "Recommended Combo",
-              style: GoogleFonts.nunito(fontSize: 18, color: Color(0xFF27214D)),
-            ),
+          Column(
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                  "Recommended Combo",
+                  style: GoogleFonts.nunito(fontSize: 18, color: Color(0xFF27214D)),
+                ),
+              ),
+            ],
           ),
           Container()
         ],
