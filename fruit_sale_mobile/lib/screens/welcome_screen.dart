@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_sale_mobile/screens/authentication_screen.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -36,11 +37,14 @@ class WelcomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 80),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => AuthenticationScreen(),),
+                );
+              },
               style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(327.0, 56.0),
-                  backgroundColor: const Color(0xFFFFA451),
-                  ),
+                minimumSize: const Size(327.0, 56.0),
+                backgroundColor: const Color(0xFFFFA451),
+              ),
               child: const Text(
                 "Let's continue",
                 style: TextStyle(
