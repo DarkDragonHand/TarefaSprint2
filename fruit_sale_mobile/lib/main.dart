@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_sale_mobile/screens/authentication_screen.dart';
-import 'package:fruit_sale_mobile/screens/home_screen.dart';
 import 'package:fruit_sale_mobile/screens/splash_screen.dart';
-import 'package:fruit_sale_mobile/screens/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());

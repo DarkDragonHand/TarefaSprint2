@@ -28,11 +28,11 @@ class WelcomeScreen extends StatelessWidget {
                         color: const Color(0xFF27214D),
                         fontSize: 16,
                         fontWeight: FontWeight.bold)),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Text(
                   "We deliver the best and freshest fruit salad in town. Order for a combo today!!!",
                   style: GoogleFonts.nunito(
-                    color: Color(0xFF5D577E),
+                    color: const Color(0xFF5D577E),
                     fontSize: 16,
                   ),
                 ),
@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AuthenticationScreen(),
+                  builder: (context) => const AuthenticationScreen(),
                 ),
               );
             },
@@ -55,11 +55,12 @@ class WelcomeScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
             ),
-            child: const Text(
+            child: Text(
               "Let's continue",
-              style: TextStyle(
+              style: GoogleFonts.nunito(
                 color: Colors.white,
-                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+                fontSize: 16.0,
               ),
               textAlign: TextAlign.center,
             ),

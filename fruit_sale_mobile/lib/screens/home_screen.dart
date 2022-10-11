@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_sale_mobile/data/name_inherited.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,18 +19,18 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         title: Text(
-          "Welcome, ${widget.nome}",
-          style: TextStyle(fontSize: 14, color: Color(0xFF27214D)),
+          "Welcome, ${widget.nome}.",
+          style: const TextStyle(fontSize: 14, color: Color(0xFF27214D)),
         ),
         actions: [
           CircleAvatar(
             radius: 30,
+            backgroundColor: Colors.white,
             child: IconButton(
                 onPressed: () {},
                 icon: Image.asset("assets/images/basket.png")),
-            backgroundColor: Colors.white,
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 12.0),
           ),
         ],
@@ -48,9 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   Flexible(
                     child: TextField(
                       decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.search),
+                        prefixIcon: const Icon(Icons.search),
                         prefixIconColor: Colors.grey,
-                        fillColor: Color(0xFFF5F5F5),
+                        fillColor: const Color(0xFFF5F5F5),
                         filled: true,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8.0),
@@ -61,11 +60,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 6.0),
-                    margin: EdgeInsets.symmetric(horizontal: 6.0),
+                    padding: const EdgeInsets.symmetric(vertical: 6.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 6.0),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Color(0xFFF7F7FC)),
+                        color: const Color(0xFFF7F7FC)),
                     child: IconButton(
                         onPressed: () {},
                         icon: Image.asset("assets/images/filter.png")),
@@ -78,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Container(
-                  color: Color(0xFFFAFAFA),
+                  color: const Color(0xFFFAFAFA),
                   child: Row(
                     children: [
                       Container(
@@ -102,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Text("All",
                             style: GoogleFonts.nunito(
-                              color: Color(0xFF333333),
+                              color: const Color(0xFF333333),
                               fontSize: 14,
                             )),
                       ),
@@ -126,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Text("Salad Combo",
                             style: GoogleFonts.nunito(
-                              color: Color(0xFF333333),
+                              color: const Color(0xFF333333),
                               fontSize: 14,
                             )),
                       ),
@@ -150,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Text("Berry Combo",
                             style: GoogleFonts.nunito(
-                              color: Color(0xFF333333),
+                              color: const Color(0xFF333333),
                               fontSize: 14,
                             )),
                       ),
@@ -174,7 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Text("Mango Berry",
                             style: GoogleFonts.nunito(
-                              color: Color(0xFF333333),
+                              color: const Color(0xFF333333),
                               fontSize: 14,
                             )),
                       ),
@@ -190,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Text(
                 "Recommended Combo",
                 style:
-                    GoogleFonts.nunito(fontSize: 18, color: Color(0xFF27214D)),
+                    GoogleFonts.nunito(fontSize: 18, color: const Color(0xFF27214D)),
               ),
             ),
             Padding(
@@ -199,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 width: 56,
                 height: 2,
-                color: Color(0xFFFFA451),
+                color: const Color(0xFFFFA451),
               ),
             ),
             Padding(
@@ -209,19 +208,23 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 children: [
                   Container(
-                      //child: IconButton(onPressed: onPressed, icon: icon),
                       margin: const EdgeInsets.only(right: 23),
                       width: 152,
                       height: 183,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.white)),
+                          color: Colors.white),
+                      child: Image.asset(
+                        "assets/images/Honey-Lime-Peach-Fruit-Salad-3-725x725-1-removebg-preview1.png"),
+                      ),
                   Container(
                       width: 152,
                       height: 183,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.white)),
+                          color: Colors.white),
+                      child: Image.asset("assets/images/Glowing-Berry-Fruit-Salad-8-720x720-removebg-preview2.png"),
+                      ),
                 ],
               ),
             ),
@@ -237,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       "Hotest",
                       style: GoogleFonts.nunito(
-                          fontSize: 18, color: Color(0xFF27214D)),
+                          fontSize: 18, color: const Color(0xFF27214D)),
                     ),
                   ),
                   Padding(
@@ -246,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       "Popular",
                       style: GoogleFonts.nunito(
-                          fontSize: 18, color: Color(0xFF253F66).withOpacity(0.5)),
+                          fontSize: 18, color: const Color(0xFF253F66).withOpacity(0.5)),
                     ),
                   ),
                   Padding(
@@ -255,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       "New Combo",
                       style: GoogleFonts.nunito(
-                          fontSize: 18, color: Color(0xFF253F66).withOpacity(0.5)),
+                          fontSize: 18, color: const Color(0xFF253F66).withOpacity(0.5)),
                     ),
                   ),
                 ],
@@ -267,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 width: 56,
                 height: 2,
-                color: Color(0xFFFFA451),
+                color: const Color(0xFFFFA451),
               ),
             ),
             Padding(
@@ -279,27 +282,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   children: [
                     Container(
-                        //child: IconButton(onPressed: onPressed, icon: icon),
                         margin: const EdgeInsets.only(right: 16),
                         width: 140,
                         height: 150,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFFFFFCF2))),
+                            color: const Color(0xFFFFFCF2)),
+                        child: Image.asset("assets/images/breakfast-quinoa-and-red-fruit-salad-134061-1-removebg-preview2.png")),
                     Container(
-                        margin: const EdgeInsets.only(right: 16),
+                      margin: const EdgeInsets.only(right: 16),
                         width: 140,
                         height: 150,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFFFEF4F4))),
+                            color: const Color(0xFFFEF4F4)),
+                      child: Image.asset("assets/images/Best-Ever-Tropical-Fruit-Salad8-WIDE-removebg-preview1.png")),
                     Container(
-                        margin: const EdgeInsets.only(right: 16),
+                      margin: const EdgeInsets.only(right: 16),
                         width: 140,
                         height: 150,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
-                            color: Color(0xFFF1EFF6))),
+                            color: const Color(0xFFF1EFF6)),
+                      child: Image.asset("assets/images/BerryWorld-Kiwiberry-Fruit-Salad-LS-removebg-preview1.png")),
                   ],
                 ),
               ),

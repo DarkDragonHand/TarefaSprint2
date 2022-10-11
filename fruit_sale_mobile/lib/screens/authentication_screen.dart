@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_sale_mobile/screens/home_screen.dart';
-import 'package:fruit_sale_mobile/screens/splash_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthenticationScreen extends StatefulWidget {
@@ -36,7 +35,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                       style: GoogleFonts.nunito(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFF27214D))),
+                          color: const Color(0xFF27214D))),
                   const SizedBox(height: 17),
                   TextField(
                     controller: nameController,
