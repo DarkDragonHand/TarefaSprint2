@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_sale_mobile/screens/home_screen.dart';
+import 'package:fruit_sale_mobile/screens/splash_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthenticationScreen extends StatefulWidget {
@@ -25,7 +27,8 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
               child: Image.asset('assets/images/Component2.png'),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 40, left: 20, right: 20, bottom: 58),
+              padding: const EdgeInsets.only(
+                  top: 40, left: 20, right: 20, bottom: 58),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -50,15 +53,19 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                   ),
                   const SizedBox(height: 58.0),
                   ElevatedButton(
-                    onPressed: () {
-                      print(nameController.text);
+                    onPressed: () {                     
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(nome: nameController.text),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(400.0, 56.0),
                       backgroundColor: const Color(0xFFFFA451),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
-                      ),
+                          borderRadius: BorderRadius.circular(10)),
                     ),
                     child: Text(
                       "Start Ordering",
